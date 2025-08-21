@@ -100,6 +100,7 @@
             this.ACBtn.ForeColor = System.Drawing.Color.Black;
             this.ACBtn.Name = "ACBtn";
             this.ACBtn.UseVisualStyleBackColor = false;
+            this.ACBtn.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ACBtn_MouseClick);
             // 
             // PorcentajeBtn
             // 
@@ -116,6 +117,7 @@
             this.btn7.ForeColor = System.Drawing.Color.Black;
             this.btn7.Name = "btn7";
             this.btn7.UseVisualStyleBackColor = false;
+            this.btn7.Click += new System.EventHandler(this.btn7_Click);
             // 
             // btn4
             // 
@@ -133,6 +135,7 @@
             this.btn1.ForeColor = System.Drawing.Color.Black;
             this.btn1.Name = "btn1";
             this.btn1.UseVisualStyleBackColor = false;
+            this.btn1.Click += new System.EventHandler(this.btn1_Click);
             // 
             // btn2
             // 
@@ -141,6 +144,7 @@
             this.btn2.ForeColor = System.Drawing.Color.Black;
             this.btn2.Name = "btn2";
             this.btn2.UseVisualStyleBackColor = false;
+            this.btn2.Click += new System.EventHandler(this.btn2_Click);
             // 
             // btn5
             // 
@@ -149,6 +153,7 @@
             this.btn5.ForeColor = System.Drawing.Color.Black;
             this.btn5.Name = "btn5";
             this.btn5.UseVisualStyleBackColor = false;
+            this.btn5.Click += new System.EventHandler(this.btn5_Click);
             // 
             // btn8
             // 
@@ -157,6 +162,7 @@
             this.btn8.ForeColor = System.Drawing.Color.Black;
             this.btn8.Name = "btn8";
             this.btn8.UseVisualStyleBackColor = false;
+            this.btn8.Click += new System.EventHandler(this.btn8_Click);
             // 
             // btn3
             // 
@@ -192,6 +198,7 @@
             this.btndot.ForeColor = System.Drawing.Color.Black;
             this.btndot.Name = "btndot";
             this.btndot.UseVisualStyleBackColor = false;
+            this.btndot.Click += new System.EventHandler(this.btndot_Click);
             // 
             // btn0
             // 
@@ -200,11 +207,13 @@
             this.btn0.ForeColor = System.Drawing.Color.Black;
             this.btn0.Name = "btn0";
             this.btn0.UseVisualStyleBackColor = false;
+            this.btn0.Click += new System.EventHandler(this.btn0_Click);
             // 
             // DisplayTxb
             // 
             resources.ApplyResources(this.DisplayTxb, "DisplayTxb");
             this.DisplayTxb.Name = "DisplayTxb";
+            this.DisplayTxb.TextChanged += new System.EventHandler(this.DisplayTxb_TextChanged);
             // 
             // MAIN
             // 
