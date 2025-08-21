@@ -2,7 +2,7 @@
 
 ![C#](https://img.shields.io/badge/Language-C%23-blue)
 ![Windows Forms](https://img.shields.io/badge/Framework-Windows_Forms-lightgrey)
-![License](https://img.shields.io/badge/License-MIT-green)
+![License](https://img.shields.io/badge/License-All%20Rights%20Reserved-red)
 
 A **simple calculator application** built using **C# and Windows Forms**.  
 It supports basic arithmetic operations, percentages, and has a clean and intuitive user interface.
@@ -37,6 +37,6 @@ CalculatorC_/
 2. Open the project in Visual Studio.
 3. Build and run the project (F5 or ▶️).
    
-   ## 🛡️ License
+## 🛡️ License
 All rights reserved © 2025 ASIKXR.  
 You may **not** copy, modify, or distribute this code without my permission.
