@@ -27,10 +27,14 @@ namespace CalculatorC_
         string displayText = "0";
         float resultValue = 0;
 
+        //Evitar que se pueda escribir un operador al principio y funcion para no repetir operadores
+        bool lastWasOperator = false;
+
         private void button11_Click(object sender, EventArgs e)
         {
             if (displayText == "0") displayText = "";
             displayText += "9";
+            bool lastWasOperator = false;
             UpdateDisplay();
         }
 
@@ -38,6 +42,7 @@ namespace CalculatorC_
         {
             if (displayText == "0") displayText = "";
             displayText += "4";
+            bool lastWasOperator = false;
             UpdateDisplay();
         }
 
@@ -45,6 +50,7 @@ namespace CalculatorC_
         {
             if (displayText == "0") displayText = "";
             displayText += "6";
+            bool lastWasOperator = false;
             UpdateDisplay();
         }
 
@@ -52,6 +58,7 @@ namespace CalculatorC_
         {
             if (displayText == "0") displayText = "";
             displayText += "3";
+            bool lastWasOperator = false;
             UpdateDisplay();
         }
 
@@ -64,6 +71,7 @@ namespace CalculatorC_
         {
             if (displayText == "0") displayText = "";
             displayText = "0";
+            bool lastWasOperator = false;
             UpdateDisplay();
         }
 
@@ -71,6 +79,7 @@ namespace CalculatorC_
         {
             if (displayText == "0") displayText = "";
             displayText += "1";
+            bool lastWasOperator = false;
             UpdateDisplay();
         }
 
@@ -78,6 +87,7 @@ namespace CalculatorC_
         {
             if (displayText == "0") displayText = "";
             displayText += "2";
+            bool lastWasOperator = false;
             UpdateDisplay();
         }
 
@@ -85,6 +95,7 @@ namespace CalculatorC_
         {
             if (displayText == "0") displayText = "";
             displayText += "0";
+            bool lastWasOperator = false;
             UpdateDisplay();
         }
 
@@ -92,6 +103,7 @@ namespace CalculatorC_
         {
             if (displayText == "0") displayText = "";
             displayText += ".";
+            bool lastWasOperator = true;
             UpdateDisplay();
         }
 
@@ -99,6 +111,7 @@ namespace CalculatorC_
         {
             if (displayText == "0") displayText = "";
             displayText += "5";
+            bool lastWasOperator = false;
             UpdateDisplay();
         }
 
@@ -106,6 +119,7 @@ namespace CalculatorC_
         {
             if (displayText == "0") displayText = "";
             displayText += "7";
+            bool lastWasOperator = false;
             UpdateDisplay();
         }
 
@@ -113,7 +127,64 @@ namespace CalculatorC_
         {
             if (displayText == "0") displayText = "";
             displayText += "8";
+            bool lastWasOperator = false;
             UpdateDisplay();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (displayText != "0" && !lastWasOperator)
+            {
+                displayText += "+";
+                lastWasOperator = true;
+                UpdateDisplay();
+            }
+        }
+
+        private void MenosBtn_Click(object sender, EventArgs e)
+        {
+            if (displayText != "0" && !lastWasOperator)
+            {
+                displayText += "-";
+                lastWasOperator = true;
+                UpdateDisplay();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (displayText != "0" && !lastWasOperator)
+            {
+                displayText += "*";
+                lastWasOperator = true;
+                UpdateDisplay();
+            }
+        }
+
+        private void DivisionBtn_Click(object sender, EventArgs e)
+        {
+            if (displayText != "0" && !lastWasOperator)
+            {
+                displayText += "/";
+                lastWasOperator = true;
+                UpdateDisplay();
+            }
+        }
+
+        private void IgualBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var result = new System.Data.DataTable().Compute(displayText, null);
+                displayText = result.ToString();
+                lastWasOperator = false;
+                UpdateDisplay();
+            }
+            catch
+            {
+                displayText = "Error";
+                UpdateDisplay();
+            }
         }
     }
 }

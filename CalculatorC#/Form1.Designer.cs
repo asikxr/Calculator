@@ -64,6 +64,7 @@
             resources.ApplyResources(this.IgualBtn, "IgualBtn");
             this.IgualBtn.Name = "IgualBtn";
             this.IgualBtn.UseVisualStyleBackColor = false;
+            this.IgualBtn.Click += new System.EventHandler(this.IgualBtn_Click);
             // 
             // MenosBtn
             // 
@@ -71,6 +72,7 @@
             resources.ApplyResources(this.MenosBtn, "MenosBtn");
             this.MenosBtn.Name = "MenosBtn";
             this.MenosBtn.UseVisualStyleBackColor = false;
+            this.MenosBtn.Click += new System.EventHandler(this.MenosBtn_Click);
             // 
             // button2
             // 
@@ -78,6 +80,7 @@
             resources.ApplyResources(this.button2, "button2");
             this.button2.Name = "button2";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -85,6 +88,7 @@
             resources.ApplyResources(this.button1, "button1");
             this.button1.Name = "button1";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // DivisionBtn
             // 
@@ -92,6 +96,7 @@
             resources.ApplyResources(this.DivisionBtn, "DivisionBtn");
             this.DivisionBtn.Name = "DivisionBtn";
             this.DivisionBtn.UseVisualStyleBackColor = false;
+            this.DivisionBtn.Click += new System.EventHandler(this.DivisionBtn_Click);
             // 
             // ACBtn
             // 
