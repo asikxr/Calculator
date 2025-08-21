@@ -114,6 +114,7 @@
             this.PorcentajeBtn.ForeColor = System.Drawing.Color.Black;
             this.PorcentajeBtn.Name = "PorcentajeBtn";
             this.PorcentajeBtn.UseVisualStyleBackColor = false;
+            this.PorcentajeBtn.Click += new System.EventHandler(this.PorcentajeBtn_Click);
             // 
             // btn7
             // 

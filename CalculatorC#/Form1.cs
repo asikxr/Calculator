@@ -25,7 +25,6 @@ namespace CalculatorC_
         }
 
         string displayText = "0";
-        float resultValue = 0;
 
         //Evitar que se pueda escribir un operador al principio y funcion para no repetir operadores
         bool lastWasOperator = false;
@@ -176,8 +175,37 @@ namespace CalculatorC_
             try
             {
                 var result = new System.Data.DataTable().Compute(displayText, null);
-                displayText = result.ToString();
+
+                // Si el resultado es infinito (ej. dividir entre 0)
+                if (double.TryParse(result.ToString(), out double val) && double.IsInfinity(val))
+                {
+                    displayText = "∞";
+                }
+                else
+                {
+                    displayText = result.ToString();
+                }
+
                 lastWasOperator = false;
+                UpdateDisplay();
+            }
+            catch
+            {
+                displayText = "Error";
+                UpdateDisplay();
+            }
+
+        }
+
+        private void PorcentajeBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double value = double.Parse(displayText);
+
+                value = value / 100;
+
+                displayText = value.ToString();
                 UpdateDisplay();
             }
             catch
